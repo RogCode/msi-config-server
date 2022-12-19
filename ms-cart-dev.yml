@@ -4,18 +4,15 @@ server:
 spring:
     
   datasource:
-    driver-class-name: org.h2.Driver
-    url: jdbc:h2:mem:ms-cart
-    username: sa
-    password: ''
+    driver-class-name: com.microsoft.sqlserver.jdbc.SQLServerDriver
   
   h2:
     console:
-      enabled: true
+      enabled: false
       path: /h2-console
-
+  
   jpa:
-    defer-datasource-initialization: true  
+    defer-datasource-initialization: true
     hibernate:
       ddl-auto: create-drop
     properties:
@@ -27,7 +24,19 @@ spring:
   sql:
     init:
       mode: always
-      platform: h2    
+      platform: sql
+      
+#  boot:
+#    admin:
+#      client:
+#        enabled: true
+  
+#  zipkin:
+#    enabled: false
+#    sender:
+#      type: kafka
+#    kafka:
+#      topic: zipkin
 
 management:
   endpoints:
@@ -60,4 +69,7 @@ resilience4j:
         base-config: defecto
         
 configuration:
-    texto: Configurando entorno Defecto tercera actualización...
+    texto: Configurando entorno Desarrollo ...
+    autor:
+        nombre: Jose Perez
+        email: joseperez@email.com
