@@ -30,7 +30,7 @@ spring:
         enabled: true
   
   zipkin:
-    enabled: false
+    enabled: true
     sender:
       type: kafka
     kafka:
