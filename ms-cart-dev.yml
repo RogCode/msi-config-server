@@ -26,17 +26,17 @@ spring:
       mode: always
       platform: sql
       
-#  boot:
-#    admin:
-#      client:
-#        enabled: true
+  boot:
+    admin:
+      client:
+        enabled: true
   
-#  zipkin:
-#    enabled: false
-#    sender:
-#      type: kafka
-#    kafka:
-#      topic: zipkin
+  zipkin:
+    enabled: true
+    sender:
+      type: kafka
+    kafka:
+      topic: zipkin
 
 management:
   endpoints:
